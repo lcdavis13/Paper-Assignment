@@ -70,16 +70,16 @@ vs.
 
 ##### Programmer Convenience - An example #####
 
-constexpr double degToRad (double deg) {return deg*M_PI/180;}
-const double Angle1 = degToRad(165);
-const double Angle2 = degToRad(230);
-const double Angle3 = degToRad(47);
+	constexpr double degToRad (double deg) {return deg*M_PI/180;}
+	const double Angle1 = degToRad(165);
+	const double Angle2 = degToRad(230);
+	const double Angle3 = degToRad(47);
 
-	vs
-	
-const double Angle1 = 165*M_PI/180;
-const double Angle2 = 230*M_PI/180;
-const double Angle3 = 47*M_PI/180;
+vs
+
+	const double Angle1 = 165*M_PI/180;
+	const double Angle2 = 230*M_PI/180;
+	const double Angle3 = 47*M_PI/180;
 
 
 ---
@@ -98,14 +98,14 @@ const double Angle3 = 47*M_PI/180;
 
 ##### Runtime Efficiency - Some code #####
 
-constexpr int fibonacci(int n)
-{
-	return (n == 0 || n == 1) ? (1) : (fibonacci(n - 1) + fibonacci(n - 2));
-}
-
-const int Fib10 = fibonacci(100);
-const int Fib20 = fibonacci(200);
-const int Fib30 = fibonacci(300);
+	constexpr int fibonacci(int n)
+	{
+		return (n == 0 || n == 1) ? (1) : (fibonacci(n - 1) + fibonacci(n - 2));
+	}
+	
+	const int Fib10 = fibonacci(100);
+	const int Fib20 = fibonacci(200);
+	const int Fib30 = fibonacci(300);
 
 
 ---
