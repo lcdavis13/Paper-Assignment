@@ -65,6 +65,7 @@ vs.
 
 
 	constexpr int cubed(int n) {return n*n*n;}
+	
 	int static_array[cubed(25)];
 
 
