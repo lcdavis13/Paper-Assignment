@@ -121,7 +121,7 @@ vs.
 
 ### Reaction ###
 
-##### How did the community receice this revision? #####
+##### How did the community receive this revision? #####
 	 
 	 
 **Postitive Reactions**
@@ -136,11 +136,13 @@ vs.
 
 ### Reaction ###
 
-##### How did the community receice this revision? #####
+##### How did the community receive this revision? #####
 
 **Negative Reactions**
 
  - return type
+ 
+ - new types
 
  - Incompatible with most algorithms from standard library.
 
