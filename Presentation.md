@@ -58,6 +58,20 @@ vs.
 ---
 ### Why is this useful? ###
 
+##### Static Memory Allocation #####
+
+ - Static arrays cannot be allocated with non-const sizes
+ 	- Using a function was previously impossible
+
+
+	constexpr int cubed(int n) {return n*n*n;}
+	
+	int static_array[cubed(25)];
+
+
+---
+### Why is this useful? ###
+
 ##### Programmer Convenience #####
 
  - constants can be computed using functions.
