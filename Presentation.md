@@ -64,9 +64,9 @@ vs.
  	- Using a function was previously impossible
 
 
-	constexpr int cubed(int n) {return n*n*n;}
+	constexpr int cubed(int n) { return n*n*n; }
 	
-	int static_array[cubed(25)];
+	int static_array [ cubed(25) ];
 
 
 ---
@@ -84,7 +84,7 @@ vs.
 
 ##### Programmer Convenience - An example #####
 
-	constexpr double degToRad (double deg) {return deg*M_PI/180;}
+	constexpr double degToRad (double deg) { return deg*M_PI/180; }
 	const double Angle1 = degToRad(165);
 	const double Angle2 = degToRad(230);
 	const double Angle3 = degToRad(47);
