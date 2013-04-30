@@ -206,8 +206,23 @@ vs
  - Speed is not improved in some situations.
 
 ---
+### How does this relate to what we've learned? ###
 
+##### Functional Programming ######
 
+ - No side-effects
+ 	- Immutable memory only
+ 	- Readability and optimizability
+ 
+---
+### How does this relate to what we've learned? ###
+
+##### Recursion vs Iteration #####
+
+ - No data storage yet, so iteration is impossible 
+ - Recursive functions only!!!
+
+---
 ### Conclusion ###
 ackvnldjksn
 ##### 
