@@ -58,16 +58,42 @@ vs.
 ---
 ### Why is this useful? ###
 
-##### Programmer Efficiency #####
+##### Static Memory Allocation #####
+
+ - Static arrays cannot be allocated with non-const sizes
+ 	- Using a function was previously impossible
+
+
+	constexpr int cubed(int n) { return n*n*n; }
+	
+	int static_array [ cubed(25) ];
+
+
+---
+### Why is this useful? ###
+
+##### Programmer Convenience #####
 
  - constants can be computed using functions.
 
 	- Useful for repetitive `const` declarations.
 	- Decrease code 
 
+---
+### Why is this useful? ###
 
+##### Programmer Convenience - An example #####
 
+	constexpr double degToRad (double deg) { return deg*M_PI/180; }
+	const double Angle1 = degToRad(165);
+	const double Angle2 = degToRad(230);
+	const double Angle3 = degToRad(47);
 
+vs
+
+	const double Angle1 = 165*M_PI/180;
+	const double Angle2 = 230*M_PI/180;
+	const double Angle3 = 47*M_PI/180;
 
 
 ---
@@ -77,7 +103,24 @@ vs.
 
  - Heavy computations can be done at compile time vs run time.
 	
-	- Recursive functions...
+	- Recursive functions
+		
+
+
+---
+### Why is this useful? ###
+
+##### Runtime Efficiency - Some code #####
+
+	constexpr int fibonacci(int n)
+	{
+		return (n == 0 || n == 1) ? (1) : (fibonacci(n - 1) + fibonacci(n - 2));
+	}
+	
+	const int Fib10 = fibonacci(100);
+	const int Fib20 = fibonacci(200);
+	const int Fib30 = fibonacci(300);
+
 
 ---
 ### How does this improve the C++ language? ###
@@ -165,8 +208,23 @@ vs.
  - Speed is not improved in some situations.
 
 ---
+### How does this relate to what we've learned? ###
 
+##### Functional Programming ######
 
+ - No side-effects
+ 	- Immutable memory only
+ 	- Readability and optimizability
+ 
+---
+### How does this relate to what we've learned? ###
+
+##### Recursion vs Iteration #####
+
+ - No data storage yet, so iteration is impossible 
+ - Recursive functions only!!!
+
+---
 ### Conclusion ###
 ackvnldjksn
 ##### 
